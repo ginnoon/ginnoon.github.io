@@ -1,27 +1,23 @@
 .main {
+    width: min(100%, 768px);
     background-color: #282828;
     padding: 16px;
     border-radius: 16px;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 16px;
 }
 
-.main h1 {
-    margin: 8px 0;
-}
-
-.main button {
+.main button, .main a[button] {
     background-color: #0060c0;
     padding: 8px 16px;
     border-radius: 99999px;
 
     &:hover {
+        position: relative;
         background-color: #0070d8;
     }
     &:active {

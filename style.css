@@ -13,10 +13,13 @@ html, body {
 	width: 100%;
 	background-color: #202020;
 	color: #e8e8e8;
+	font-weight: 500;
 }
 
 body {
 	padding: 16px;
+	display: flex;
+	justify-content: center;
 }
 
 button, input[type="submit"], input[type="reset"] {
