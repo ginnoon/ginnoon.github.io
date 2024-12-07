@@ -1,20 +1,20 @@
 .footer {
-    padding: 8px 12px;
-    text-align: center;
-    user-select: none;
-    background-color: #00000080;
-    z-index: 100;
-    position: fixed;
-    bottom: 0;
-    border-radius: 12px 12px 0 0;
+  padding: 8px 12px;
+  text-align: center;
+  user-select: none;
+  background-color: #00000080;
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  border-radius: 12px 12px 0 0;
 }
 
 .footer br {
-    display: none;
+  display: none;
 }
 
 @media only screen and (max-width: 860px) {
-    .footer br {
-        display: block;
-    }
+  .footer br {
+    display: block;
+  }
 }
