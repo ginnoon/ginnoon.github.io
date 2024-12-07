@@ -18,4 +18,9 @@ window.onload = function () {
 	});
 
 	document.addEventListener('mouseup', () => isDragging = false);
+
+	Slides.addEventListener('wheel', (e) => {
+		e.preventDefault();
+		Slides.scrollBy(e.deltaY, 0);
+	});
 }
