@@ -11,13 +11,16 @@
     gap: 16px;
 }
 
+.main span {
+    font-size: .75rem;
+    font-weight: 500;
+}
+
 .main button, .main a[button] {
     background-color: #0060c0;
     padding: 8px 16px;
     border-radius: 99999px;
-
     &:hover {
-        position: relative;
         background-color: #0070d8;
     }
     &:active {
