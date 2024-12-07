@@ -1,0 +1,22 @@
+.footer {
+    padding: 8px;
+    text-align: center;
+    user-select: none;
+    background-color: #00000080;
+    z-index: 100;
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    border-radius: 16px 16px 0 0;
+}
+
+.footer br {
+    display: none;
+}
+
+@media only screen and (max-width: 860px) {
+    .footer br {
+        display: block;
+    }
+}

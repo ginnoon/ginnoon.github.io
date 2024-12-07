@@ -1,0 +1,30 @@
+.main {
+    background-color: #282828;
+    padding: 16px;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.main h1 {
+    margin: 8px 0;
+}
+
+.main button {
+    background-color: #0060c0;
+    padding: 8px 16px;
+    border-radius: 99999px;
+
+    &:hover {
+        background-color: #0070d8;
+    }
+    &:active {
+        background-color: #0080f0;
+    }
+}
