@@ -16,7 +16,7 @@ window.onload = function () {
 function SetSlides() {
 	const list = document.querySelector('.slides');
 	const slide = list.querySelectorAll('.slide');
-	const listScrollWidth = list.scrollWidth, listClientWidth = list.clientWidth, slideWidth = slide[0].clientWidth, gap = 8;
+	const listScrollWidth = list.scrollWidth, listClientWidth = list.clientWidth;
 	let startX = 0, nowX = 0, endX = 0, listX = 0;
 
 	const onScrollStart = (e) => {
