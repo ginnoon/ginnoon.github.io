@@ -10,6 +10,22 @@
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 16px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    block-size: 1px;
+    inline-size: 100%;
+    inset-block-end: -1px;
+    background-color: currentcolor;
+    transition: transform .25s ease-in-out;
+    transform: scaleX(0);
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
 }
 
 .main img {
@@ -30,6 +46,7 @@
   background-color: #0060c0;
   padding: 8px 16px;
   border-radius: 99999px;
+  position: relative;
 
   &:hover {
     background-color: #0070d8;
