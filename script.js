@@ -15,7 +15,8 @@ window.onload = function () {
 
 function SetSlides() {
 	const list = document.querySelector('.slides');
-	const listScrollWidth = list.scrollWidth, listClientWidth = list.clientWidth;
+	const slide = list.querySelectorAll('.slide');
+	const listScrollWidth = list.scrollWidth, listClientWidth = list.clientWidth, slideWidth = slide[0].clientWidth, gap = 8;
 	let startX = 0, nowX = 0, endX = 0, listX = 0;
 
 	const onScrollStart = (e) => {
@@ -34,11 +35,15 @@ function SetSlides() {
 		listX = getTranslateX();
 		if (listX > 0) {
 			setTranslateX(0);
-			list.style.transition = `all 0.3s ease`;
+			slide.forEach(element => {
+				element.style.transition = `all 0.3s ease`;
+			});
 			listX = 0;
 		} else if (listX < listClientWidth - listScrollWidth) {
 			setTranslateX(listClientWidth - listScrollWidth);
-			list.style.transition = `all 0.3s ease`;
+			slide.forEach(element => {
+				element.style.transition = `all 0.3s ease`;
+			});
 			listX = listClientWidth - listScrollWidth;
 		}
 
@@ -52,13 +57,19 @@ function SetSlides() {
 
 		setTimeout(() => {
 			bindEvents();
-			list.style.transition = '';
+			slide.forEach(element => {
+				element.style.transition = '';
+			});
 		}, 300);
 	};
 	const onClick = (e) => { if (startX - endX !== 0) e.preventDefault(); };
 	const getClientX = (e) => e.touches ? e.touches[0].clientX : e.clientX;
-	const getTranslateX = () => { return parseInt(getComputedStyle(list).transform.split(/[^\-0-9]+/g)[5]); };
-	const setTranslateX = (x) => { list.style.transform = `translateX(${x}px)`; };
+	const getTranslateX = () => { return parseInt(getComputedStyle(slide[0]).transform.split(/[^\-0-9]+/g)[5]); };
+	const setTranslateX = (x) => {
+		slide.forEach(element => {
+			element.style.transform = `translateX(${x}px)`;
+		});
+	};
 
 	const bindEvents = () => {
 		list.addEventListener('mousedown', onScrollStart);
