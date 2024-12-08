@@ -9,7 +9,7 @@ window.onload = function () {
 		'https://mclaren.bloomreach.io/delivery/resources/content/gallery/mclaren-racing/downloads/2024/miami-wallpaper-mobile.jpg'
 	];
 	document.querySelectorAll('.slide').forEach((element, index) => {
-    element.style.backgroundImage = `url(${imglist[index]})`;
+		element.style.backgroundImage = `url(${imglist[index]})`;
 	});
 }
 
