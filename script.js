@@ -1,27 +1,29 @@
 window.onload = function () {
 	const Slides = document.querySelector('.slides');
-	let isDragging = false;
-	let startX, deltaX;
+	let isDragging = false, isDragged = false;
+	let startX;
 
 	Slides.addEventListener('mousedown', (event) => {
 		isDragging = true;
+		isDragged = false;
 		startX = event.clientX;
 	});
 
 	document.addEventListener('mousemove', (event) => {
 		if (isDragging) {
 			const currentX = event.clientX;
-			deltaX = currentX - startX;
+			const deltaX = currentX - startX;
 			Slides.scrollLeft -= deltaX;
 			startX = currentX;
+			isDragged = true;
 		}
 	});
 
 	document.addEventListener('mouseup', () => isDragging = false);
 
-	// Slides.addEventListener('click', (event) => {
-	// 	if (startX - deltaX !== 0) event.preventDefault();
-	// });
+	Slides.addEventListener('click', (event) => {
+		if (isDragged) { event.preventDefault(); return; }
+	});
 
 	Slides.addEventListener('wheel', (event) => {
 		event.preventDefault();
@@ -37,8 +39,10 @@ window.onload = function () {
 	];
 	document.querySelectorAll('.slide').forEach((element, index) => {
     element.style.backgroundImage = `url(${imglist[index]})`;
-		// element.addEventListener('click', () => {
-		// 	console.log('🧡');
-		// });
+
+		element.addEventListener('click', (event) => {
+			if (isDragged) { event.preventDefault(); return; }
+			console.log('🧡');
+		});
 });
 }
