@@ -10,7 +10,24 @@
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 16px;
+}
 
+.main img {
+  width: 4rem;
+  float: right;
+  position: absolute;
+  right: 16px;
+  border: solid 2px #606060;
+  border-radius: 99999px;
+}
+
+.main h1 span {
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+.main p {
+  position: relative;
   &::after {
     content: "";
     display: block;
@@ -26,20 +43,6 @@
   &:hover::after {
     transform: scaleX(1);
   }
-}
-
-.main img {
-  width: 4rem;
-  float: right;
-  position: absolute;
-  right: 16px;
-  border: solid 2px #606060;
-  border-radius: 99999px;
-}
-
-.main h1 span {
-  font-size: .75rem;
-  font-weight: 500;
 }
 
 .main button, .main a[button] {
