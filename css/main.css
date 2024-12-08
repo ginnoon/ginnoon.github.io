@@ -67,6 +67,6 @@
   background-color: #202020;
   background-size: cover;
   border-radius: 16px;
-  user-select: none;
+  pointer-events: none;
   cursor: inherit;
 }

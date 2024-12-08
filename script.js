@@ -1,7 +1,7 @@
 window.onload = function () {
 	const Slides = document.querySelector('.slides');
 	let isDragging = false;
-	let startX;
+	let startX, deltaX;
 
 	Slides.addEventListener('mousedown', (event) => {
 		isDragging = true;
@@ -11,7 +11,7 @@ window.onload = function () {
 	document.addEventListener('mousemove', (event) => {
 		if (isDragging) {
 			const currentX = event.clientX;
-			const deltaX = currentX - startX;
+			deltaX = currentX - startX;
 			Slides.scrollLeft -= deltaX;
 			startX = currentX;
 		}
@@ -19,9 +19,13 @@ window.onload = function () {
 
 	document.addEventListener('mouseup', () => isDragging = false);
 
-	Slides.addEventListener('wheel', (e) => {
-		e.preventDefault();
-		Slides.scrollBy(e.deltaY, 0);
+	// Slides.addEventListener('click', (event) => {
+	// 	if (startX - deltaX !== 0) event.preventDefault();
+	// });
+
+	Slides.addEventListener('wheel', (event) => {
+		event.preventDefault();
+		Slides.scrollBy(event.deltaY, 0);
 	});
 
 	const imglist = [
@@ -33,5 +37,8 @@ window.onload = function () {
 	];
 	document.querySelectorAll('.slide').forEach((element, index) => {
     element.style.backgroundImage = `url(${imglist[index]})`;
+		// element.addEventListener('click', () => {
+		// 	console.log('🧡');
+		// });
 });
 }
