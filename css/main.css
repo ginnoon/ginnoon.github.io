@@ -3,6 +3,7 @@
   background-color: #282828;
   padding: 16px;
   border-radius: 16px;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -11,7 +12,16 @@
   gap: 16px;
 }
 
-.main span {
+.main img {
+  width: 4rem;
+  float: right;
+  position: absolute;
+  right: 16px;
+  border: solid 2px #606060;
+  border-radius: 99999px;
+}
+
+.main h1 span {
   font-size: .75rem;
   font-weight: 500;
 }
