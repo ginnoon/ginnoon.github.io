@@ -37,7 +37,7 @@
     inline-size: 100%;
     inset-block-end: -1px;
     background-color: currentcolor;
-    transition: transform .3s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform .3s cubic-bezier(.2, 1, .2, 1);
     transform: scaleX(0);
   }
   &:hover::after {
