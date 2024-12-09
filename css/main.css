@@ -69,10 +69,18 @@
   background-size: cover;
   border-radius: 16px;
   user-select: none;
-  
+
   transition: clip-path .2s ease;
   clip-path: polygon(0 0, calc(100% - 64px) 0, 100% 64px, 100% 100%, 64px 100%, 0 calc(100% - 64px));
   &:hover {
     clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
   }
+}
+
+.main .mclarenlogo {
+  width: 32px;
+  aspect-ratio: 1;
+  background-color: #ff8000;
+  margin-left: auto;
+  clip-path: polygon(52% 76%, 75% 60%, 96% 39%, 100% 30%, 97% 24%, 85% 20%, 68% 22%, 44% 29%, 23% 37%, 0 50%, 19% 46%, 36% 43%, 51% 44%, 60% 51%, 60% 63%);
 }
