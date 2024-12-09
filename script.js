@@ -28,7 +28,10 @@ function SetSlides() {
 	};
 	const onScrollMove = (e) => {
 		nowX = getClientX(e);
-		setTranslateX(listX + nowX - startX);
+		listX = getTranslateX();
+		if ((listX > 0) || (listX < listClientWidth - listScrollWidth)) {
+			setTranslateX(listX + nowX / 2 - startX);
+		} else setTranslateX(listX + nowX - startX);
 	};
 	const onScrollEnd = (e) => {
 		listX = getTranslateX();
@@ -41,7 +44,6 @@ function SetSlides() {
 			slide.forEach(element => element.style.transition = `all 0.3s ease`);
 			listX = listClientWidth - listScrollWidth;
 		}
-		console.log(listClientWidth);
 
 		window.removeEventListener('mousedown', onScrollStart);
 		window.removeEventListener('touchstart', onScrollStart);
