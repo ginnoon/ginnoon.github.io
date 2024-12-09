@@ -16,7 +16,7 @@ window.onload = function () {
 function SetSlides() {
 	const list = document.querySelector('.slides');
 	const slide = list.querySelectorAll('.slide');
-	const listScrollWidth = list.scrollWidth, listClientWidth = list.clientWidth;
+	let listScrollWidth = list.scrollWidth, listClientWidth = list.clientWidth;
 	let startX = 0, nowX = 0, endX = 0, listX = 0;
 
 	const onScrollStart = (e) => {
@@ -31,21 +31,19 @@ function SetSlides() {
 		setTranslateX(listX + nowX - startX);
 	};
 	const onScrollEnd = (e) => {
-		endX = getClientX(e);
+		// endX = getClientX(e);
+		endX = (e.touches && e.changedTouches[0].clientX) || e.clientX;
 		listX = getTranslateX();
 		if (listX > 0) {
 			setTranslateX(0);
-			slide.forEach(element => {
-				element.style.transition = `all 0.3s ease`;
-			});
+			slide.forEach(element => element.style.transition = `all 0.3s ease`);
 			listX = 0;
 		} else if (listX < listClientWidth - listScrollWidth) {
 			setTranslateX(listClientWidth - listScrollWidth);
-			slide.forEach(element => {
-				element.style.transition = `all 0.3s ease`;
-			});
+			slide.forEach(element => element.style.transition = `all 0.3s ease`);
 			listX = listClientWidth - listScrollWidth;
 		}
+		console.log(listClientWidth);
 
 		window.removeEventListener('mousedown', onScrollStart);
 		window.removeEventListener('touchstart', onScrollStart);
@@ -57,9 +55,7 @@ function SetSlides() {
 
 		setTimeout(() => {
 			bindEvents();
-			slide.forEach(element => {
-				element.style.transition = '';
-			});
+			slide.forEach(element => element.style.transition = '');
 		}, 300);
 	};
 	const onClick = (e) => { if (startX - endX !== 0) e.preventDefault(); };
@@ -77,6 +73,19 @@ function SetSlides() {
 		list.addEventListener('click', onClick);
 	};
 	bindEvents();
+
+	window.addEventListener('resize', (e) => {
+		listScrollWidth = list.scrollWidth, listClientWidth = list.clientWidth;
+		if (listX < listClientWidth - listScrollWidth) {
+			setTranslateX(listClientWidth - listScrollWidth);
+			slide.forEach(element => element.style.transition = `all 0.3s ease`);
+			listX = listClientWidth - listScrollWidth;
+		}
+		setTimeout(() => {
+			bindEvents();
+			slide.forEach(element => element.style.transition = '');
+		}, 300);
+	});
 }
 
 function SetSlidesSimple() {
