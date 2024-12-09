@@ -31,8 +31,6 @@ function SetSlides() {
 		setTranslateX(listX + nowX - startX);
 	};
 	const onScrollEnd = (e) => {
-		// endX = getClientX(e);
-		endX = (e.touches && e.changedTouches[0].clientX) || e.clientX;
 		listX = getTranslateX();
 		if (listX > 0) {
 			setTranslateX(0);
@@ -60,12 +58,8 @@ function SetSlides() {
 	};
 	const onClick = (e) => { if (startX - endX !== 0) e.preventDefault(); };
 	const getClientX = (e) => e.touches ? e.touches[0].clientX : e.clientX;
-	const getTranslateX = () => { return parseInt(getComputedStyle(slide[0]).transform.split(/[^\-0-9]+/g)[5]); };
-	const setTranslateX = (x) => {
-		slide.forEach(element => {
-			element.style.transform = `translateX(${x}px)`;
-		});
-	};
+	const getTranslateX = () => parseInt(getComputedStyle(slide[0]).transform.split(/[^\-0-9]+/g)[5]);
+	const setTranslateX = (x) => slide.forEach(element => element.style.transform = `translateX(${x}px)`);
 
 	const bindEvents = () => {
 		list.addEventListener('mousedown', onScrollStart);
