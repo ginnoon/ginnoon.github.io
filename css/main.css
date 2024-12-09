@@ -58,7 +58,7 @@
 
   display: flex;
   gap: 8px;
-  
+
   &:active { cursor: grabbing; }
 }
 
@@ -73,6 +73,6 @@
   transition: clip-path .3s ease;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 64px 100%, 0 calc(100% - 64px));
   &:hover {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%, 0 100%);
   }
 }
