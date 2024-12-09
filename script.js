@@ -28,10 +28,7 @@ function SetSlides() {
 	};
 	const onScrollMove = (e) => {
 		nowX = getClientX(e);
-		listX = getTranslateX();
-		if ((listX > 0) || (listX < listClientWidth - listScrollWidth)) {
-			setTranslateX(listX + nowX / 2 - startX);
-		} else setTranslateX(listX + nowX - startX);
+		setTranslateX(listX + nowX - startX);
 	};
 	const onScrollEnd = (e) => {
 		listX = getTranslateX();
@@ -69,6 +66,7 @@ function SetSlides() {
 		list.addEventListener('click', onClick);
 	};
 	bindEvents();
+	setTranslateX(0);
 
 	window.addEventListener('resize', (e) => {
 		listScrollWidth = list.scrollWidth, listClientWidth = list.clientWidth;
