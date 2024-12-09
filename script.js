@@ -41,6 +41,7 @@ function SetSlides() {
 			slide.forEach(element => element.style.transition = `all 0.3s ease`);
 			listX = listClientWidth - listScrollWidth;
 		}
+		
 		window.removeEventListener('mousedown', onScrollStart);
 		window.removeEventListener('touchstart', onScrollStart);
 		window.removeEventListener('mousemove', onScrollMove);
