@@ -28,7 +28,7 @@
 
 .main button, .main a[button] {
   background-color: #0060c0;
-  padding: 8px 16px;
+  padding: .5rem 1rem;
   border-radius: 99999px;
   position: relative;
 
