@@ -46,7 +46,7 @@
   &:hover { background-color: #ffffff30 }
   &:active { background-color: #ffffff40 }
   & .effects {
-    transition: border .2s ease;
+    transition: border .2s linear;
     border: 1px solid #fff;
     opacity: 0;
   }
