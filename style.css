@@ -7,16 +7,6 @@
   src: url('font/Moki-Lean.woff2');
   font-weight: normal;
 }
-@font-face {
-  font-family: 'MokiMono';
-  src: url('font/Moki-Mono.woff2');
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'MokiSoft';
-  src: url('font/Moki-Soft.woff2');
-  font-weight: normal;
-}
 
 :root {
   --timing: cubic-bezier(.2, 1, .2, 1);
