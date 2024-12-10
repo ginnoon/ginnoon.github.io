@@ -67,9 +67,7 @@ img[src=""] {
     transition: transform .3s var(--timing);
     transform: scaleX(0);
   }
-  &:hover::after {
-    transform: scaleX(1);
-  }
+  &:hover::after { transform: scaleX(1) }
 }
 
 .functional {

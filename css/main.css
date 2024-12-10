@@ -31,7 +31,6 @@
   padding: .5rem 1rem;
   border-radius: 99999px;
   position: relative;
-
   &:hover { background-color: #0070d8 }
   &:active { background-color: #0080f0 }
   &:focus-visible {
@@ -42,7 +41,6 @@
 
 .main button.style2 {
   background-color: #ffffff20;
-
   &:hover { background-color: #ffffff30 }
   &:active { background-color: #ffffff40 }
   & .effects {
@@ -77,9 +75,7 @@
 
   transition: clip-path .3s var(--timing);
   clip-path: polygon(0 0, calc(100% - 64px) 0, 100% 64px, 100% 100%, 64px 100%, 0 calc(100% - 64px));
-  &:active {
-    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-  }
+  &:active { clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%) }
 }
 
 .main .swiper .swiper-slide-prev {
