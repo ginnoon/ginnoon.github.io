@@ -1,5 +1,4 @@
 window.onload = function () {
-	SetSlides();
 
 	const imglist = [
 		'https://mclaren.bloomreach.io/delivery/resources/content/gallery/mclaren-racing/downloads/2024/lando-2024-mobile-wallpaper.jpg',

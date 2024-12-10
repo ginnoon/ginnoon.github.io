@@ -40,18 +40,11 @@
   }
 }
 
-.main .slideParent {
-  width: 100%;
-  background-color: #000;
-  border-radius: 24px;
-  overflow-x: hidden;
-}
-
 .main .slides {
   width: 100%;
   background-color: #000;
   padding: 8px;
-  overflow-x: hidden;
+  overflow-x: scroll;
   border-radius: 24px;
   cursor: grab;
   mask: linear-gradient(90deg, transparent, white 32px, white calc(100% - 32px), transparent);
