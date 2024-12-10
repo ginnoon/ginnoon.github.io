@@ -40,6 +40,21 @@
   }
 }
 
+.main button.style2 {
+  background-color: #ffffff20;
+  transition: border .1s ease;
+
+  &:hover { background-color: #ffffff30 }
+  &:active { background-color: #ffffff40 }
+  & .effects {
+    transition: border .1s ease;
+    border: solid 1px transparent;
+  }
+  &.active .effects {
+    border: solid 1px gray;
+  }
+}
+
 .main .swiper {
   width: 100%;
   background-color: #000;

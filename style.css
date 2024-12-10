@@ -72,6 +72,17 @@ img[src=""] {
   }
 }
 
+.functional {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 400px) {
   html, body {
     font-size: 14px;

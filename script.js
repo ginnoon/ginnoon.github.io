@@ -22,4 +22,14 @@ window.onload = function () {
 	document.querySelectorAll('.swiper-slide').forEach((element, index) => {
 		element.style.backgroundImage = `url(${imglist[index]})`;
 	});
+
+	document.querySelectorAll('button.style2').forEach(element => {
+		element.addEventListener('click', (event) => {
+			event.target.classList.add('active');
+			setTimeout(() => event.target.classList.remove('active'), 200);
+		});
+		const effects = document.createElement('div');
+		effects.classList.add('functional', 'effects');
+		element.appendChild(effects);
+	});
 }
