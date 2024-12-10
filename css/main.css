@@ -42,16 +42,16 @@
 
 .main button.style2 {
   background-color: #ffffff20;
-  transition: border .1s ease;
 
   &:hover { background-color: #ffffff30 }
   &:active { background-color: #ffffff40 }
   & .effects {
-    transition: border .1s ease;
-    border: solid 1px transparent;
+    transition: border .2s ease;
+    border: 1px solid #fff;
+    opacity: 0;
   }
   &.active .effects {
-    border: solid 1px gray;
+    opacity: .2;
   }
 }
 
