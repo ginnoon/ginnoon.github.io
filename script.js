@@ -26,7 +26,7 @@ window.onload = function () {
 	document.querySelectorAll('button.style2').forEach(element => {
 		element.addEventListener('click', (event) => {
 			event.target.classList.add('active');
-			setTimeout(() => event.target.classList.remove('active'), 200);
+			setTimeout(() => event.target.classList.remove('active'), 300);
 		});
 		const effects = document.createElement('div');
 		effects.classList.add('functional', 'effects');

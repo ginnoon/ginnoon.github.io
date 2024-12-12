@@ -44,13 +44,20 @@
   &:hover { background-color: #ffffff30 }
   &:active { background-color: #ffffff40 }
   & .effects {
-    transition: border .2s linear;
     border: 1px solid #fff;
     opacity: 0;
   }
   &.active .effects {
-    opacity: .2;
+    animation: identifier .3s;
   }
+}
+
+@keyframes identifier {
+  0% { opacity: 0; }
+  5% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .1; }
+  100% { opacity: 0; }
 }
 
 .main .swiper {
