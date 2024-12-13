@@ -26,45 +26,6 @@
   font-weight: 500;
 }
 
-.main button, .main a[button] {
-  background-color: #0060c0;
-  padding: 0 1rem;
-  height: calc(2rem + 3px);
-  border-radius: 99999px;
-  position: relative;
-  &:hover { background-color: #0070d8 }
-  &:active { background-color: #0080f0 }
-  &:focus-visible {
-    outline: solid 2px #0080f0;
-    outline-offset: 2px;
-  }
-}
-
-.main button.style {
-  background-color: #ffffff20;
-  &:hover { background-color: #ffffff30 }
-  &:active { background-color: #ffffff40 }
-  & .effects {
-    border: 1px solid #fff;
-    opacity: 0;
-    transition: opacity .5s ease-out;
-  }
-  &.active .effects {
-    opacity: .2;
-    transition: none;
-  }
-}
-
-.main button.circle {
-  aspect-ratio: 1;
-  padding: 0;
-}
-
-.main button.toggle.on {
-  background-color: #e8e8e8;
-  color: #282828;
-}
-
 .main .swiper {
   width: 100%;
   background-color: #000;

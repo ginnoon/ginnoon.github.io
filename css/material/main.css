@@ -1,0 +1,33 @@
+.underBar {
+	position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    block-size: 1px;
+    inline-size: 100%;
+    inset-block-end: -1px;
+    background-color: currentcolor;
+    transition: transform .3s var(--timing);
+    transform: scaleX(0);
+  }
+  &:hover::after { transform: scaleX(1) }
+}
+
+.functional {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: 1.25em;
+  user-select: none;
+}

@@ -23,6 +23,7 @@ window.onload = function () {
 		element.style.backgroundImage = `url(${imglist[index]})`;
 	});
 
+
 	document.querySelectorAll('button').forEach(element => {
 		element.addEventListener('click', (event) => {
 			const target = event.currentTarget;
@@ -33,10 +34,18 @@ window.onload = function () {
 		effects.classList.add('functional', 'effects');
 		element.appendChild(effects);
 	});
+
 	document.querySelectorAll('button.toggle').forEach(element => {
 		element.addEventListener('click', (event) => {
 			const target = event.currentTarget;
 			target.classList.toggle('on');
 		});
+	});
+
+	document.querySelectorAll('button[icon]').forEach(element => {
+		const icon = document.createElement('span');
+		icon.classList.add('material-symbols-outlined');
+		icon.innerText = element.getAttribute('icon');
+		element.prepend(icon);
 	});
 }
