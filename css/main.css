@@ -48,7 +48,8 @@
     opacity: 0;
   }
   &.active .effects {
-    animation: pop .3s;
+    opacity: .5;
+    transition: opacity .3s ease-in;
   }
 }
 
