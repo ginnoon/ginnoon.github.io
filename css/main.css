@@ -75,12 +75,16 @@
   aspect-ratio: inherit;
 
   transition: clip-path .3s var(--timing);
-  clip-path: polygon(0 0, calc(100% - 64px) 0, 100% 64px, 100% 100%, 64px 100%, 0 calc(100% - 64px));
-  &:active { clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%) }
+  clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
 }
 
 .main .swiper .swiper-slide-prev {
   margin: 0;
+}
+
+.main .swiper .swiper-slide-active {
+  transition-delay: .3s;
+  clip-path: polygon(0 0, calc(100% - 96px) 0, 100% 96px, 100% 100%, 96px 100%, 0 calc(100% - 96px));
 }
 
 .main .mclarenlogo {
