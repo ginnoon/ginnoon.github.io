@@ -37,6 +37,15 @@
     outline: solid 2px #0080f0;
     outline-offset: 2px;
   }
+  & .effects {
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: opacity .3s linear;
+  }
+  &.active .effects {
+    opacity: .5;
+    transition: initial;
+  }
 }
 
 .main button.style2 {
@@ -46,10 +55,11 @@
   & .effects {
     border: 1px solid #fff;
     opacity: 0;
+    transition: opacity .5s ease-out;
   }
   &.active .effects {
-    opacity: .5;
-    transition: opacity .3s ease-in;
+    opacity: .2;
+    transition: opacity .05s linear;
   }
 }
 
