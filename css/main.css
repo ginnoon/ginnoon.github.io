@@ -50,7 +50,7 @@
   }
   &.active .effects {
     opacity: .2;
-    transition: opacity .05s linear;
+    transition: none;
   }
 }
 
