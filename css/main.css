@@ -60,6 +60,11 @@
   padding: 0;
 }
 
+.main button.toggle.on {
+  background-color: #e8e8e8;
+  color: #282828;
+}
+
 .main .swiper {
   width: 100%;
   background-color: #000;

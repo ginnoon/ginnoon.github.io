@@ -33,4 +33,10 @@ window.onload = function () {
 		effects.classList.add('functional', 'effects');
 		element.appendChild(effects);
 	});
+	document.querySelectorAll('button.toggle').forEach(element => {
+		element.addEventListener('click', (event) => {
+			const target = event.currentTarget;
+			target.classList.toggle('on');
+		});
+	});
 }
