@@ -24,12 +24,12 @@ button, a[button] {
   }
 }
 
-button.circle {
+button.circle, a[button].circle {
   aspect-ratio: 1;
   padding: 0;
 }
 
-button.toggle.on {
+button.toggle.on, a[button].toggle.on {
   background-color: #e8e8e8;
   color: #282828;
 }
