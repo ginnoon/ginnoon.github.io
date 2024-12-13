@@ -28,7 +28,8 @@
 
 .main button, .main a[button] {
   background-color: #0060c0;
-  padding: .5rem 1rem;
+  padding: 0 1rem;
+  height: calc(2rem + 3px);
   border-radius: 99999px;
   position: relative;
   &:hover { background-color: #0070d8 }
@@ -52,6 +53,11 @@
     opacity: .2;
     transition: none;
   }
+}
+
+.main button.circle {
+  aspect-ratio: 1;
+  padding: 0;
 }
 
 .main .swiper {

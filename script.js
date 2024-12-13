@@ -25,8 +25,9 @@ window.onload = function () {
 
 	document.querySelectorAll('button').forEach(element => {
 		element.addEventListener('click', (event) => {
-			event.target.classList.add('active');
-			setTimeout(() => event.target.classList.remove('active'), 100);
+			const target = event.currentTarget;
+			target.classList.add('active');
+			setTimeout(() => target.classList.remove('active'), 100);
 		});
 		const effects = document.createElement('div');
 		effects.classList.add('functional', 'effects');
