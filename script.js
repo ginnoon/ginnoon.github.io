@@ -39,6 +39,9 @@ window.onload = function () {
 		element.addEventListener('click', (event) => {
 			const target = event.currentTarget;
 			target.classList.toggle('on');
+			const eventOn = new Event('on'), eventOff = new Event('off');
+			if (target.classList.contains('on')) target.dispatchEvent(eventOn);
+			else target.dispatchEvent(eventOff);
 		});
 	});
 
