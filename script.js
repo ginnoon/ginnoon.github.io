@@ -50,4 +50,4 @@ window.onload = function () {
 		icon.innerText = element.getAttribute('icon');
 		element.prepend(icon);
 	});
-}
+};
