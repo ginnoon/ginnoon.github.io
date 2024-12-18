@@ -1,3 +1,7 @@
+window.paceOptions = {
+	className: 'my-custom-class'
+};
+
 window.onload = function () {
 	var swiper = new Swiper('.swiper', {
 		direction: 'horizontal',
@@ -22,7 +26,6 @@ window.onload = function () {
 	document.querySelectorAll('.swiper-slide').forEach((element, index) => {
 		element.style.backgroundImage = `url(${imglist[index]})`;
 	});
-
 
 	document.querySelectorAll('button').forEach(element => {
 		element.addEventListener('click', (event) => {
