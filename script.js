@@ -27,7 +27,7 @@ window.onload = function () {
 		element.style.backgroundImage = `url(${imglist[index]})`;
 	});
 
-	document.querySelectorAll('button').forEach(element => {
+	document.querySelectorAll('button, a[button]').forEach(element => {
 		element.addEventListener('click', (event) => {
 			const target = event.currentTarget;
 			target.classList.add('active');
@@ -38,7 +38,7 @@ window.onload = function () {
 		element.appendChild(effects);
 	});
 
-	document.querySelectorAll('button.toggle').forEach(element => {
+	document.querySelectorAll('button.toggle, a[button].toggle').forEach(element => {
 		element.addEventListener('click', (event) => {
 			const target = event.currentTarget;
 			const eventOn = new Event('on'), eventOff = new Event('off');
@@ -47,7 +47,7 @@ window.onload = function () {
 		});
 	});
 
-	document.querySelectorAll('button[icon]').forEach(element => {
+	document.querySelectorAll('button[icon], a[button][icon]').forEach(element => {
 		const icon = document.createElement('span');
 		icon.classList.add('material-symbols-outlined');
 		icon.innerText = element.getAttribute('icon');
