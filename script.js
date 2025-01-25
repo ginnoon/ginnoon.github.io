@@ -14,7 +14,7 @@ window.onload = function () {
 			el: '.swiper-pagination',
 		},
 		spaceBetween: 8,
-		grabCursor : true,
+		grabCursor: true,
 	});
 
 	const imglist = [
@@ -52,5 +52,43 @@ window.onload = function () {
 		icon.classList.add('material-symbols-outlined');
 		icon.innerText = element.getAttribute('icon');
 		element.prepend(icon);
+	});
+
+
+	const cbs = document.querySelectorAll('checkbox');
+
+	cbs.forEach(e => {
+		const label = document.createElement('label');
+		label.textContent = e.textContent;
+
+		const input = document.createElement('input');
+		input.type = 'checkbox';
+
+		const circle = document.createElement('div');
+		circle.classList.add('circle');
+
+		const checkboxBg = document.createElement('div');
+		checkboxBg.classList.add('checkboxBg');
+
+		const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+		svg.setAttribute('focusable', 'false');
+		svg.setAttribute('viewBox', '0 0 24 24');
+		svg.setAttribute('aria-hidden', 'true');
+		svg.classList.add('checkboxCheckmark');
+
+		const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+		path.setAttribute('fill', 'none');
+		path.setAttribute('d', 'M1.73,12.91 8.1,19.28 22.79,4.59');
+		path.classList.add('checkboxPath');
+
+		svg.appendChild(path);
+		checkboxBg.appendChild(svg);
+
+		label.appendChild(input);
+		label.appendChild(circle);
+		label.appendChild(checkboxBg);
+
+		// e.appendChild(label);
+		e.parentNode.replaceChild(label, e);
 	});
 };

@@ -1,0 +1,75 @@
+label {
+  position: relative;
+  padding-left: 2.1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  inset: 0;
+}
+
+.checkboxBg {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 0.125rem solid currentColor;
+  border-radius: 0.125rem;
+  left: .5rem;
+}
+
+.checkboxCheckmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 180ms cubic-bezier(0, 0, 0.2, 1), transform 180ms cubic-bezier(0, 0, 0.2, 1);
+  opacity: 1;
+  color: white;
+}
+
+.checkboxPath {
+    transition: stroke-dashoffset 180ms cubic-bezier(0.4, 0, 0.6, 1);
+  stroke: currentColor;
+  stroke-width: 3.12px;
+  stroke-dashoffset: 29.7833385;
+  stroke-dasharray: 29.7833385;
+}
+
+input:checked ~ .checkboxBg {
+  background-color: #005cbb;
+  border-color: #005cbb;
+
+  background-color: #E07000;
+  border-color: #E07000;
+}
+
+input:checked ~ .checkboxBg .checkboxPath {
+  stroke-dashoffset: 0;
+}
+
+.circle {
+  width: 2.125rem;
+  height: 2.125rem;
+  position: absolute;
+  left: 0;
+  border-radius: 99999px;
+  background-color: #005cbb40;
+  background-color: #E0700040;
+  opacity: 0;
+  transition: opacity 180ms;
+}
+
+input:checked ~ .circle {
+  opacity: 1;
+}
