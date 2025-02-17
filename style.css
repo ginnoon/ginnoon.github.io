@@ -41,7 +41,6 @@
   font-family: Space Grotesk Variable, Montserrat, 'Elice Digital Baeum', sans-serif;
   -webkit-tap-highlight-color: transparent;
 	font-feature-settings: 'ss04' 1;
-	font-feature-settings: 'frac' 1;
 }
 
 html, body {
