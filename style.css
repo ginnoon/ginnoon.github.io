@@ -13,7 +13,6 @@
 	src: url(https://floriankarsten.github.io/space-grotesk/assets/fonts/SpaceGrotesk[wght].woff2) format("woff2"), url(https://floriankarsten.github.io/space-grotesk/assets/fonts/SpaceGrotesk[wght].woff) format("woff");
 	font-weight: 100 700;
 	font-style: normal;
-	font-display: block;
 }
 
 @font-face {
@@ -40,7 +39,7 @@
   margin: 0;
   font-family: Space Grotesk Variable, Montserrat, 'Elice Digital Baeum', sans-serif;
   -webkit-tap-highlight-color: transparent;
-	font-feature-settings: 'ss04' 1;
+	font-feature-settings: 'ss04' 1, 'onum' 1;
 }
 
 html, body {
