@@ -1,0 +1,23 @@
+[
+    {
+        "presentCode": 1,
+        "title": "From K.J.J",
+        "body": "1",
+        "createdAt": 1574529411,
+        "acceptedAt": 1,
+        "items": [
+            {"itemId": 22, "itemCategory": 0, "amount": 100, "title": "Catfood"},
+            {"itemId": 21, "itemCategory": 0, "amount": 20, "title": "Rare Ticket"},
+        ],
+    },
+    {
+        "presentCode": 2,
+        "title": "From K.J.J",
+        "body": "2",
+        "createdAt": 1574529411,
+        "acceptedAt": 1,
+        "items": [
+            {"itemId": 731, "itemCategory": 1, "amount": 1, "title": "Izanagi"},
+        ],
+    }
+]
