@@ -1,88 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&family=Space+Grotesk:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400');
-@import url("https://font.elice.io/css?family=Elice+Digital+Baeum");
+.textslide {
+  contain: content;
+  visibility: hidden;
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
 
-@font-face {
-  font-family: 'SpaceGrotesk';
-  src: url('https://floriankarsten.github.io/space-grotesk/assets/fonts/SpaceGrotesk[wght].woff2');
-  font-weight: normal;
-}
+  .line {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    opacity: 0;
+    will-change: opacity;
+  }
 
-@font-face {
-	font-family: Space Grotesk Variable;
-	src: url(https://floriankarsten.github.io/space-grotesk/assets/fonts/SpaceGrotesk[wght].woff2) format("woff2"), url(https://floriankarsten.github.io/space-grotesk/assets/fonts/SpaceGrotesk[wght].woff) format("woff");
-	font-weight: 100 700;
-	font-style: normal;
-}
+  .wrap {
+    opacity: 0;
+  }
 
-@font-face {
-  font-family: 'MokiLean';
-  src: url('font/Moki-Lean.woff2');
-  font-weight: normal;
-}
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: #eee;
+    transform-origin: left center;
+    transform: scaleX(0) scaleY(1.05);
+    will-change: transform;
+    pointer-events: none;
+  }
 
-@font-face {
-  font-family: 'Material Symbols Outlined';
-  font-style: normal;
-  font-weight: 100 700;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v226/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2) format('woff2');
-}
+  &.big .overlay {
+    transform: scaleX(0) scaleY(1.75);
+  }
 
-:root {
-  --timing: cubic-bezier(.2, 1, .2, 1);
-}
+  &[data-completed="true"] {
+    .line {
+      opacity: 1;
+    }
 
-*, ::before, ::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: Space Grotesk Variable, Montserrat, 'Elice Digital Baeum', sans-serif;
-  -webkit-tap-highlight-color: transparent;
-	font-feature-settings: 'ss04' 1, 'onum' 1;
-}
+    .wrap {
+      opacity: 1;
+    }
 
-html, body {
-	min-height: 100%;
-	width: 100%;
-	background-color: #202020;
-	color: #e8e8e8;
-	font-weight: 500;
-}
-
-body {
-	padding: 16px;
-	display: flex;
-	justify-content: center;
-}
-
-button, input[type="submit"], input[type="reset"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-}
-
-a {
-	color: inherit;
-	text-decoration: none;
-}
-
-img[src=""] {
-	visibility: hidden;
-}
-
-@media screen and (max-width: 400px) {
-  html, body {
-    font-size: 14px;
+    .overlay {
+      display: none;
+    }
   }
 }
 
-@media screen and (min-width: 2880px) {
-  html, body {
-    font-size: 18px;
+.animate-slide-from-right {
+  animation: slide-from-right 2s ease-out forwards;
+}
+
+#ch5_flowers_right div img {
+  animation: ch5-star 2s linear infinite;
+}
+
+@keyframes ch5-star {
+  0% {
+    opacity: 0
+  }
+
+  25% {
+    opacity: 0
+  }
+
+  62.5% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes slide-from-right {
+  0% {
+    opacity: 0;
+    transform: translate(100%) scaleX(-1)
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(25%) scaleX(-1)
   }
 }

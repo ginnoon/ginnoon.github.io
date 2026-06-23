@@ -1,9 +1,0 @@
-/* material */
-@import "material/main.css";
-@import "material/button.css";
-@import "material/checkbox.css";
-
-/* main */
-@import "keyframe.css";
-@import "main.css";
-@import "footer.css";
